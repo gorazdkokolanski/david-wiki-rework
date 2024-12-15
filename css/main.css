@@ -1,0 +1,238 @@
+html{
+    background-color: #ffffff;
+    margin: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+    overflow: hidden;
+}
+
+body{
+    background-color: #ffffff;
+    margin: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+}
+
+div{
+    font-size: 0px;
+}
+
+img{
+    -webkit-tap-highlight-color: transparent;
+}
+
+@font-face {
+    font-family: 'JetBrainsMomo';
+    src: url('../assets/JetBrainsMono-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'JetBrainsMomo';
+    src: url('../assets/JetBrainsMono-Bold.ttf');
+    font-weight: 800;
+}
+
+strong{
+    font-family: 'JetBrainsMomo';
+    font-weight: 800;
+}
+
+.folder{
+    position: absolute;
+    top: calc(50% - 64px);
+    left: calc(50% - 118px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    width: 90px;
+    cursor: pointer;
+    cursor: -moz-pointer;
+    cursor: -webkit-pointer;
+    z-index: 9999;
+}
+
+.folder:active{
+    cursor: pointer;
+    cursor: -moz-pointer;
+    cursor: -webkit-pointer;
+}
+
+.folder_title{
+    font-family: 'Electrolize', sans-serif;
+    color: #000000;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 900;
+    margin-top: 6px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.arrow_box{
+    position: relative;
+    padding: 8px;
+    width: 20px;
+    margin-top: 24px;
+    margin-left: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    top: 0;
+}
+
+.date_header{
+    font-family: 'Electrolize', sans-serif;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 36px;
+    text-align: left;
+    font-weight: 900;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    margin-top: 24px;
+    margin-left: 14px;
+    position: relative;
+    top: 0;
+}
+
+.paragraph_text{
+    font-family: 'Electrolize', sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+    margin-left: 24px;
+    width: 470px;
+}
+
+.img_container{
+    position: absolute;
+    top: 64px;
+    right: 50px;
+    /* background-color: pink; */
+    width: calc(100vw - 600px);
+    height: 100px;
+}
+
+.img_container_mobile{
+    position: relative;
+    display: block;
+}
+
+.img_item{
+    position: absolute;
+    width: 25%;
+    right: 0;
+}
+
+.left_bottom_box{
+    position: absolute;
+    left: 54px;
+    bottom: 40px;
+}
+
+.left_bottom_box_text{
+    font-family: 'Electrolize', sans-serif;
+    color: #000000;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: left;
+    margin: 0;
+}
+
+.music_box{
+    position: absolute; 
+    right: 72px; 
+    top: 36px;
+}
+
+.file{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    width: 90px;
+    cursor: pointer;
+    cursor: -moz-pointer;
+    cursor: -webkit-pointer;
+    z-index: 9999;
+    margin-right: 28px;
+    margin-bottom: 24px;
+}
+
+.file:active{
+    cursor: pointer;
+    cursor: -moz-pointer;
+    cursor: -webkit-pointer;
+}
+
+.files{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    padding-left: 24px;
+    padding-top: 24px;
+}
+
+.image_row_container{
+    display: flex;
+    width: "100%";
+    flex-direction: row;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-bottom: 12px;
+}
+
+.image_row_item{
+    flex-shrink: 1;
+    flex-grow: 0;
+    margin-right: 12px;
+    object-fit: cover;
+    height: 35vh;
+}
+
+.see_more:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#see_more_content{
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .paragraph_text{
+        width: calc(100% - 48px);
+        left: 0;
+    }
+
+    .left_bottom_box{
+        position: absolute;
+        left: 40px !important;
+        bottom: 24px !important;
+        font-size: 10px !important;
+        width: calc(100vw - 80px);
+    }
+
+
+    .delete{
+        display: none;
+    }
+
+    .music_box{
+        position: absolute; 
+        right: 24px; 
+        top: 24px;
+    }
+
+    .left_bottom_box_text{
+        font-size: 13px !important;
+        line-height: 21px !important;
+    }
+}
