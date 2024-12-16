@@ -118,7 +118,7 @@ mobileLines.forEach((line, id) => {
                 l.classList.remove("selected-mobile-line");
                 l.classList.add("not-selected-mobile-line");
             });
-            line.querySelector('.footer-line-expansion').style.maxHeight = `${line.querySelector("img").offsetHeight + 30}px`;
+            line.querySelector('.footer-line-expansion').style.maxHeight = `${line.querySelector("img").offsetHeight + 300}px`;
             line.classList.add("selected-mobile-line");
             line.classList.remove("not-selected-mobile-line");
         }
