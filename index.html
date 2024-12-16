@@ -171,6 +171,24 @@
     <div id="see_more_content">
         <p class="paragraph_text">
             I've had the chance to work on hard problems with exceptional people. Previously I worked on building
+            digital infrastructure for people with complex chronic illness; designed a home diagnostic for infectious
+            disease using oligonucleotide-based pathogen detection; and other problems I believe to be important.
+        </p>
+
+        <p class="paragraph_text">
+            I've been lucky to learn directly under some of the best operators, founders, and institutions in the world.
+            I've been even luckier to call the people I've met along the way close friends, mentors, and family. I am.
+            All of us.
+        </p>
+
+        <p class="paragraph_text">
+            I spend most of my free time reading, writing, watching film & stand up, and spending time with people I
+            love.
+        </p>
+
+
+        <!-- <p class="paragraph_text">
+            I've had the chance to work on hard problems with exceptional people. Previously I worked on building
             digital
             infrastructure for people with complex chronic illness; designed a home diagnostic for infectious disease
             using a
@@ -211,7 +229,10 @@
             I find interesting,
             and spending time with
             <a class="underline">people I love</a>.
-        </p>
+        </p> -->
+
+
+
         <!-- <p class="paragraph_text">My entrepreneurial framework was crafted and built around the direct learnings from the co-founders + investment teams @ Human Capital & <a class="underline" onclick="setAnn()">Floodgate.</a></p> -->
         <!-- <p class="paragraph_text">I learned how to build an enduring company directly under <a class="underline"
         onclick="setAnn()">Ann Miura-ko</a>, <a class="underline" onclick="setBaris()">Baris Akis</a>, <a
@@ -254,16 +275,16 @@
     </p> -->
 
     </div>
-    <p class="paragraph_text">
+    <!-- <p class="paragraph_text">
         Why - I spend my time working on what I love, surrounded by people I love.
-    </p>
+    </p> -->
     <!-- <p class="paragraph_text">Where - New York & Florida</p> -->
 
     <!-- <p class="paragraph_text">Why - My life's greatest wish is to change the world for those with complex chronic illness
     through technological innovation.</p> -->
-    <p class="paragraph_text">
+    <!-- <p class="paragraph_text">
         Whom - Everything I do is for my mother & loved ones.
-    </p>
+    </p> -->
 
     <br />
     <p class="paragraph_text" style="padding-bottom: 40px;">
@@ -301,7 +322,7 @@
         <img draggable="false" style="width: 100%; height: 278px; object-fit: cover;" src="./assets/baris.png" />
         <p class="bottom_text">Baris is the co-founder of <a class="underline" href="https://human.capital/"
                 target="_blank">Human Capital.</a> A <a class="underline"
-                href="https://www.forbes.com/30-under-30/2021/venture-capital/" target="_blank">Forbes’ 30U30</a> for
+                href="https://www.forbes.com/30-under-30/2021/venture-capital/" target="_blank">Forbes' 30U30</a> for
             Venture
             Capital. A futurist. A leader. A personal inspiration.</p>
         <div class="x" onclick="closeBaris()">
@@ -336,7 +357,7 @@
     <div id="abhijay" class="ann" draggable="false" style="right: 12px; top: 50%">
         <img draggable="false" style="width: 100%; height: 278px; object-fit: cover;" src="./assets/abhijay.png" />
         <p class="bottom_text">Aislinn helmed the <a class="underline"
-                href="https://pennathletics.com/sports/womens-rowing" target="_blank">UPenn Women’s Rowing Team.</a> A
+                href="https://pennathletics.com/sports/womens-rowing" target="_blank">UPenn Women's Rowing Team.</a> A
             close friend. A virtuous soul. My personal north star since
             secondary school.</p>
         <div class="x" style="background-color: rgba(0, 0, 0, 0.5);" onclick="closeAbhijay()">
@@ -381,9 +402,9 @@
                 }
             }
 
-            document.querySelector(".setaann").addEventListener("click", ()=>{
-                setAnn()
-            })
+            // document.querySelector(".setaann").addEventListener("click", () => {
+            //     setAnn()
+            // })
 
             function closeAnn() {
                 console.log("hi")
@@ -391,9 +412,9 @@
                 display.style.display = "none"
             }
 
-            document.querySelector(".closeaann").addEventListener("click", ()=>{
-                closeAnn()
-            })
+            // document.querySelector(".closeaann").addEventListener("click", () => {
+            //     closeAnn()
+            // })
 
             function setBaris() {
                 zIndex += 1;
@@ -491,9 +512,9 @@
                 }
             }
 
-            document.querySelector(".setfaam").addEventListener("click", ()=>{
-                setFamily()
-            })
+            // document.querySelector(".setfaam").addEventListener("click", () => {
+            //     setFamily()
+            // })
 
             function closeFamily() {
                 console.log("hi")
@@ -501,9 +522,9 @@
                 display.style.display = "none"
             }
 
-            document.querySelector(".closefam").addEventListener("click", ()=>{
-                closeFamily()
-            })
+            // document.querySelector(".closefam").addEventListener("click", () => {
+            //     closeFamily()
+            // })
 
             let mouse = { x: 0, y: 0 }
             let person = ""
@@ -879,9 +900,6 @@
         })
 
     </script>
-
-<audio src="audio/sound.MP3"></audio>
-    <script src="sounds.js"></script>
 
     <script src="./js/type.js"></script>
 </body>
