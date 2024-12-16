@@ -105,23 +105,22 @@ const mobileIndex = document.querySelector(".mobile-audio-index")
 const mobileLines = document.querySelectorAll(".footer-bottom-line")
 
 mobileLines.forEach((line, id) => {
-    line.addEventListener("click", () => {
+    const handleLineClick = () => {
         if (line.classList.contains("selected-mobile-line")) {
             mobileLines.forEach(l => {
-                l.querySelector('.footer-line-expansion').style.maxHeight = "0px"
-                l.classList.remove("selected-mobile-line")
-                l.classList.remove("not-selected-mobile-line")
-            })
-        }
-        else {
+                l.querySelector('.footer-line-expansion').style.maxHeight = "0px";
+                l.classList.remove("selected-mobile-line");
+                l.classList.remove("not-selected-mobile-line");
+            });
+        } else {
             mobileLines.forEach(l => {
-                l.querySelector('.footer-line-expansion').style.maxHeight = "0px"
-                l.classList.remove("selected-mobile-line")
-                l.classList.add("not-selected-mobile-line")
-            })
-            line.querySelector('.footer-line-expansion').style.maxHeight = `${line.querySelector("img").offsetHeight + 30}px`
-            line.classList.add("selected-mobile-line")
-            line.classList.remove("not-selected-mobile-line")
+                l.querySelector('.footer-line-expansion').style.maxHeight = "0px";
+                l.classList.remove("selected-mobile-line");
+                l.classList.add("not-selected-mobile-line");
+            });
+            line.querySelector('.footer-line-expansion').style.maxHeight = `${line.querySelector("img").offsetHeight + 30}px`;
+            line.classList.add("selected-mobile-line");
+            line.classList.remove("not-selected-mobile-line");
         }
 
         const lineAudioSrc = `sounds/${id + 1}.m4a`;
@@ -136,8 +135,15 @@ mobileLines.forEach((line, id) => {
             audio.play();
             currentlyPlayingLine = id;
         }
-    })
-})
+    };
+
+    // Add both click and touchstart events
+    line.addEventListener("click", handleLineClick);
+    line.addEventListener("touchstart", (e) => {
+        e.preventDefault(); // Prevent ghost clicks
+        handleLineClick();
+    });
+});
 
 mobileFooterTop.addEventListener("click", () => {
     if (!mobileOpened) {

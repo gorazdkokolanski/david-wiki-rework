@@ -408,6 +408,7 @@ body.no-cursor{
         display: flex;
         flex-direction: column;
         border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+        align-items: center;
     }
 
     .footer-line-main{
