@@ -3,6 +3,9 @@ const image = document.querySelector(".right-heart-image")
 const midHeart = document.querySelector(".mid-heart")
 const rightHeart = document.querySelector(".right-heart")
 const audioIndex = document.querySelector(".audio-index")
+const audio = document.querySelector("audio"); // Global audio element
+
+let currentlyPlayingLine = null;
 
 lines.forEach((line, id) => {
     line.addEventListener("mouseover", () => {
@@ -14,6 +17,26 @@ lines.forEach((line, id) => {
         line.classList.remove("not-selected-heart-line")
         image.src = `img/rh${id + 1}.jpg`
     })
+
+    line.addEventListener("click", () => {
+        const lineAudioSrc = `sounds/${id + 1}.m4a`;
+
+        // If clicking the same line that's currently playing
+        if (currentlyPlayingLine === id) {
+            if (!audio.paused) {
+                // Pause if currently playing
+                audio.pause();
+            } else {
+                // Resume if currently paused
+                audio.play();
+            }
+        } else {
+            // Different line clicked:
+            audio.src = lineAudioSrc;
+            audio.play();
+            currentlyPlayingLine = id;
+        }
+    });
 })
 
 midHeart.addEventListener("mouseout", () => {
@@ -45,6 +68,21 @@ audioIndex.addEventListener("click", () => {
         opened = false
     }
 })
+
+window.addEventListener("mousemove", (e) => {
+    if (opened) {
+        if (midHeart.contains(e.target)) {
+            document.querySelector("body").classList.remove("no-cursor");
+        } else {
+            document.querySelector("body").classList.add("no-cursor");
+            document.querySelector(".closex").style.left = `${e.clientX}px`
+            document.querySelector(".closex").style.top = `${e.clientY}px`
+        }
+    }
+    else {
+        document.querySelector("body").classList.remove("no-cursor");
+    }
+});
 
 document.addEventListener("click", () => {
     if (opened && document.querySelector("body").classList.contains("no-cursor")) {
@@ -84,6 +122,19 @@ mobileLines.forEach((line, id) => {
             line.querySelector('.footer-line-expansion').style.maxHeight = `${line.querySelector("img").offsetHeight + 30}px`
             line.classList.add("selected-mobile-line")
             line.classList.remove("not-selected-mobile-line")
+        }
+
+        const lineAudioSrc = `sounds/${id + 1}.m4a`;
+        if (currentlyPlayingLine === id) {
+            if (!audio.paused) {
+                audio.pause();
+            } else {
+                audio.play();
+            }
+        } else {
+            audio.src = lineAudioSrc;
+            audio.play();
+            currentlyPlayingLine = id;
         }
     })
 })
