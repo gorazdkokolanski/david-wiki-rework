@@ -421,8 +421,8 @@ body.no-cursor{
         width: 95%;
         display: flex;
         justify-content: center;
-        max-height: 0;
-        transition: .5s all ease;
+        max-height: 0px;
+        transition: .2s all linear;
         position: relative;
         overflow: hidden;
     }
@@ -450,7 +450,7 @@ body.no-cursor{
     }
 
     .selected-mobile-line .footer-line-expansion{
-        max-height: 1000px;
+        /* height: calc-size(auto); */
     }
 
 }

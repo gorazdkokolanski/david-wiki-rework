@@ -70,15 +70,18 @@ mobileLines.forEach((line, id) => {
     line.addEventListener("click", () => {
         if (line.classList.contains("selected-mobile-line")) {
             mobileLines.forEach(l => {
+                l.querySelector('.footer-line-expansion').style.maxHeight = "0px"
                 l.classList.remove("selected-mobile-line")
                 l.classList.remove("not-selected-mobile-line")
             })
         }
         else {
             mobileLines.forEach(l => {
+                l.querySelector('.footer-line-expansion').style.maxHeight = "0px"
                 l.classList.remove("selected-mobile-line")
                 l.classList.add("not-selected-mobile-line")
             })
+            line.querySelector('.footer-line-expansion').style.maxHeight = `${line.querySelector("img").offsetHeight + 30}px`
             line.classList.add("selected-mobile-line")
             line.classList.remove("not-selected-mobile-line")
         }
