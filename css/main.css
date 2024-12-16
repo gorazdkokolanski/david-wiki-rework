@@ -209,7 +209,6 @@ strong{
 
 @media only screen and (max-width: 600px) {
     .paragraph_text{
-        width: calc(100% - 48px);
         left: 0;
     }
 
