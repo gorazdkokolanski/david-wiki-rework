@@ -362,7 +362,7 @@ body.no-cursor{
 
     .heart-footer{
         position: absolute;
-        bottom: -70vh;
+        bottom: -50vh;
         left: 5px;
         right: 5px;
         display: flex;
@@ -394,7 +394,7 @@ body.no-cursor{
     .heart-footer-bottom{
         display: flex;
         flex-direction: column;
-        height: 70vh;
+        height: 50vh;
         width: 97%;
         overflow: scroll;
     }
