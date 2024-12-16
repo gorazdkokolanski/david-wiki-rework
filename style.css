@@ -423,7 +423,7 @@ body.no-cursor{
         width: 95%;
         display: flex;
         justify-content: center;
-        max-height: 0px;
+        height: 0px;
         transition: .2s all linear;
         position: relative;
         overflow: hidden;
