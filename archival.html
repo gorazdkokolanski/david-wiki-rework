@@ -32,10 +32,68 @@
 
     <section style="height: 100vh; display: flex; align-items: center; justify-content: center;">
 
-        <img height="60px" src="assets/folder.svg" alt="folder">
+        <!-- Add inline style to make the folder movable and work on mobile -->
+        <img height="60px" src="assets/folder.svg" alt="folder" 
+             style="position:fixed; left:50%; top:50%; transform:translate(-50%,-50%); cursor:grab; touch-action:none;
+             user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;">
 
     </section>
 
-</body>
+    <script>
+        const folder = document.querySelector('img[alt="folder"]');
+        let isDragging = false;
+        let offsetX = 0;
+        let offsetY = 0;
 
+        // Mouse events
+        folder.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            offsetX = e.clientX - folder.offsetLeft;
+            offsetY = e.clientY - folder.offsetTop;
+            folder.style.cursor = 'grabbing';
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (isDragging) {
+                e.preventDefault();
+                folder.style.left = (e.clientX - offsetX) + 'px';
+                folder.style.top = (e.clientY - offsetY) + 'px';
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+            folder.style.cursor = 'grab';
+        });
+
+        // Touch events for mobile
+        folder.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            const touch = e.touches[0];
+            offsetX = touch.clientX - folder.offsetLeft;
+            offsetY = touch.clientY - folder.offsetTop;
+            folder.style.cursor = 'grabbing';
+        });
+
+        document.addEventListener('touchmove', (e) => {
+            if (isDragging) {
+                e.preventDefault();
+                const touch = e.touches[0];
+                folder.style.left = (touch.clientX - offsetX) + 'px';
+                folder.style.top = (touch.clientY - offsetY) + 'px';
+            }
+        });
+
+        document.addEventListener('touchend', () => {
+            isDragging = false;
+            folder.style.cursor = 'grab';
+        });
+    </script>
+
+</body>
 </html>
