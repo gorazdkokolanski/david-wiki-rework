@@ -6,7 +6,7 @@ window.addEventListener("mousemove", (e) => {
 });
 
 let currPhoto = 0
-let numberOfPhotos = 5
+let numberOfPhotos = 4
 
 document.querySelector(".left-abs-heart").addEventListener("click", () => {
     if (currPhoto == 0) {
