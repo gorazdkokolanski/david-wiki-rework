@@ -5,12 +5,12 @@ window.addEventListener("mousemove", (e) => {
     document.querySelector(".right-arr").style.top = `${e.clientY - document.querySelector(".abs-heart-div").getBoundingClientRect().top}px`
 });
 
-let currPhoto = 0
+let currPhoto = 1
 let numberOfPhotos = 4
 
 document.querySelector(".left-abs-heart").addEventListener("click", () => {
-    if (currPhoto == 0) {
-        currPhoto = numberOfPhotos + 1
+    if (currPhoto == 1) {
+        currPhoto = numberOfPhotos+1
     }
     currPhoto--
     document.querySelector(".abs-heart-img").src = `img/heart-${currPhoto}.jpg`
