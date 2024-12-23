@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+
+<html style="overflow-y: scroll;" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>David Ayala</title>
+    <meta property="og:title" content="David Ayala">
+    <meta property="og:image" content="https://david-wiki-rework.vercel.app/img/main-thumbnail.jpg">
+    <meta property="og:url" content="https://david.wiki">
+    <meta property="og:type" content="website">
+    <meta name="author" content="David Morales">
+
+    <meta property="og:description" content="david.wiki">
+
+    <link rel="icon" href="./assets/favicon.ico">
+    <link rel="apple-touch-icon" href="./assets/ann.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="header.css">
+
+</head>
+
+<body style="background-color: white; color: black;">
+
+    <header>
+        <div>David Ayala</div>
+        <a href="home.html">Home</a>
+        <a href="writing.html">Writing</a>
+        <a href="sounds.html">Sounds</a>
+        <a href="archival.html">Archival</a>
+        <a href="heart.html">Heart</a>
+    </header>
+
+    <script>
+        function seeMore() {
+            var isVisible = document.getElementById("see_more_content").offsetParent
+            console.log(isVisible)
+            if (isVisible) {
+                document.getElementById("see_more_content").style.display = "none"
+                document.getElementById("see_more").innerText = "See More >>>"
+            } else {
+                document.getElementById("see_more_content").style.display = "block"
+                document.getElementById("see_more").innerText = "See Less <<<"
+            }
+        }
+
+
+    </script>
+
+    <style>
+        /* #container {
+      text-align: center;
+    } */
+
+        /* #text {
+      display: inline-block;
+      vertical-align: middle;
+      color: orange;
+      letter-spacing: 2px;
+    } */
+
+        #cursor {
+            display: inline-block;
+            vertical-align: middle;
+            width: 2px;
+            height: 16px;
+            margin-top: 12px;
+            margin-bottom: 20px;
+            background-color: white;
+            animation: blink .75s step-end infinite;
+        }
+
+        .underline {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .black {
+            color: #000000;
+        }
+
+        .ann {
+            display: none;
+            position: absolute;
+            top: 42px;
+            right: 42px;
+            width: 355px;
+            /* height: 200px; */
+            background-color: white;
+            padding: 8px;
+            object-fit: cover;
+            cursor: pointer;
+            cursor: -moz-pointer;
+            cursor: -webkit-pointer;
+            z-index: 9;
+        }
+
+        .bottom_text {
+            color: black;
+            font-family: 'JetBrainsMomo';
+            font-size: 10px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 0px;
+        }
+
+        .x {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            width: 18px;
+            height: 18px;
+            border-radius: 18px;
+            background-color: rgba(255, 255, 255, 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .music_box_ {
+            position: absolute;
+            top: 36px;
+            right: 36px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        #music {
+            display: none;
+        }
+
+        @keyframes blink {
+
+            from,
+            to {
+                background-color: transparent
+            }
+
+            50% {
+                background-color: white;
+            }
+        }
+
+        .paragraph_text {
+            color: black;
+            font-family: Helvetica, sans-serif;
+        }
+    </style>
+
+    <br />
+    <br />
+    <br />
+
+    <div id="container">
+        <p class="paragraph_text" style="display: inline-block; width: auto;">I'm a&nbsp;</p>
+        <p id="text" class="paragraph_text" style="display: inline-block; margin-left: 0; width: auto;"></p>
+        <div id="cursor"></div>
+    </div>
+    <p class="paragraph_text">I'm the co-founder of an applied research lab building software & models to decode
+        the biology of aging and transform how we prevent & treat age-related diseases. <a onclick="seeMore()"
+            id="see_more" class="see_more">See More >>></a></p>
+
+    <div id="see_more_content">
+        <p class="paragraph_text">
+            I've had the chance to work on hard problems with exceptional people. Previously I worked on building
+            digital infrastructure for people with complex chronic illness; designed a home diagnostic for infectious
+            disease using oligonucleotide-based pathogen detection; and other problems I believe to be important.
+        </p>
+
+        <p class="paragraph_text">
+            I've been lucky to learn directly under some of the best operators, founders, and institutions in the world.
+            I've been even luckier to call the people I've met along the way close friends, mentors, and family. I am.
+            All of us.
+        </p>
+
+        <p class="paragraph_text">
+            I spend most of my free time reading, writing, watching film & stand up, and spending time with people I
+            love.
+        </p>
+
+
+        <!-- <p class="paragraph_text">
+            I've had the chance to work on hard problems with exceptional people. Previously I worked on building
+            digital
+            infrastructure for people with complex chronic illness; designed a home diagnostic for infectious disease
+            using a
+            novel approach that combined oligonucleotide-based pathogen detection with a colorimetric readout; and other
+            problems I believe to be important.
+        </p>
+        <p class="paragraph_text">
+            I've been lucky to learn directly under legends like <a class="underline setaann">Ann
+                Miura-Ko,</a> and
+            some of the best operators, founders, and
+            institutions in the world. I've been even luckier to call the people I've met along the way close friends,
+            mentors, and <a class="underline setfaam">family</a>. I am. All of us.
+        </p>
+        <p class="paragraph_text">
+            I spend most of my free time <a class="underline"
+                onclick="window.open('https://www.navalmanack.com/navals-recommended-reading', '_blank')">reading,</a>
+            <a class="underline" onclick="window.open('https://www.david.wiki/writing.html', '_blank')">writing,</a>
+            watching
+            <a class="underline"
+                onclick="window.open('https://a24films.com/films/everything-everywhere-all-at-once', '_blank')">film</a>
+            & <a class="underline" onclick="window.open('https://www.youtube.com/watch?v=Nfe2MoPDdkM', '_blank')">stand
+                up,</a>
+            sifting between <a class="underline"
+                onclick="window.open('https://open.spotify.com/track/7uhAqFWN1GDG1IX6m3C0sm?si=010b7414052346b1&nd=1', '_blank')">disco;</a>
+            <a class="underline"
+                onclick="window.open('https://open.spotify.com/track/1YgDGKyKhFlimPw3mLavPG?si=aeedafddfb18489e&nd=1', '_blank')">alternative
+                hip
+                hop</a> + <a class="underline"
+                onclick="window.location = 'https://open.spotify.com/track/6VnpKLtfNH4Dk09YSGPSyR?si=294e15a37f2c4466&nd=1'">R&amp;B;</a>
+            <a class="underline"
+                onclick="window.location = 'https://open.spotify.com/track/3fwqOw3lzCle2zxamHMcQ2?si=6c133017d29142a1&nd=1'">salsa
+                romántica;</a> and <a class="underline"
+                onclick="window.open('https://open.spotify.com/track/2X485T9Z5Ly0xyaghN73ed?si=3bfb5510946442e7&nd=1', '_blank')">indie
+                rock,</a> doing deep dives into <a class="underline"
+                onclick="window.open('https://www.youtube.com/watch?v=-q8nIhhwkVs', '_blank')">people;</a> places; and
+            <a class="underline"
+                onclick="window.open('https://beccahuman.substack.com/p/the-meaning-of-suffering?utm_source=substack&utm_medium=email', '_blank')">concepts</a>
+            I find interesting,
+            and spending time with
+            <a class="underline">people I love</a>.
+        </p> -->
+
+
+
+        <!-- <p class="paragraph_text">My entrepreneurial framework was crafted and built around the direct learnings from the co-founders + investment teams @ Human Capital & <a class="underline" onclick="setAnn()">Floodgate.</a></p> -->
+        <!-- <p class="paragraph_text">I learned how to build an enduring company directly under <a class="underline"
+        onclick="setAnn()">Ann Miura-ko</a>, <a class="underline" onclick="setBaris()">Baris Akis</a>, <a
+        class="underline" onclick="setEliana()">Eliana Berger</a>, and other legendary operators, founders, and
+      institutions. I've been incredibly lucky
+      to learn alongside founders like <a class="underline" onclick="setArjun()">Arjun</a> & <a class="underline"
+        onclick="window.open('https://techcrunch.com/2022/03/29/cloaked-series-a/', '_blank')">Abhijay Bhatnagar</a>, <a
+        class="underline"
+        onclick="window.open('https://www.businesswire.com/news/home/20220106005089/en/Thiel-Foundation-Announces-Next-Thiel-Fellow-Class', '_blank')">Tamy
+        Chayo</a>, <a class="underline"
+        onclick="window.open('https://healthcare-co.notion.site/healthcare-co/Stealth-Healthcare-Startup-Roles-b2124c95c78d43c1b3f3d520e8142b91', '_blank')">Havi
+        Nguyen</a>, and
+      many more. I've been even luckier to call the people I've met along the way <a class="underline"
+        onclick="setAbhijay()">close friends</a>,
+      <a class="underline" onclick="setHavi()">mentors</a>, and <a class="underline" onclick="setFamily()">family</a>. I
+      am. All of us.
+    </p>
+
+    <p class="paragraph_text">I spend most of my free time <a class="underline"
+        onclick="window.open('https://www.navalmanack.com/navals-recommended-reading', '_blank')">reading</a>, <a
+        class="underline" onclick="window.open('https://02052001.com/all/', '_blank')">writing</a>, watching <a
+        class="underline"
+        onclick="window.open('https://a24films.com/films/everything-everywhere-all-at-once', '_blank')">film</a> & <a
+        class="underline" onclick="window.open('https://www.youtube.com/watch?v=Nfe2MoPDdkM', '_blank')">stand up</a>,
+      sifting between <a class="underline"
+        onclick="window.open('https://open.spotify.com/track/7uhAqFWN1GDG1IX6m3C0sm?si=010b7414052346b1&nd=1', '_blank')">disco</a>;
+      <a class="underline"
+        onclick="window.open('https://open.spotify.com/track/1YgDGKyKhFlimPw3mLavPG?si=aeedafddfb18489e&nd=1', '_blank')">alternative
+        hip hop</a> + <a class="underline"
+        onclick="window.location = 'https://open.spotify.com/track/6VnpKLtfNH4Dk09YSGPSyR?si=294e15a37f2c4466&nd=1'">R&B</a>;
+      <a class="underline"
+        onclick="window.location = 'https://open.spotify.com/track/3fwqOw3lzCle2zxamHMcQ2?si=6c133017d29142a1&nd=1'">salsa
+        romántica</a>; and <a class="underline"
+        onclick="window.open('https://open.spotify.com/track/2X485T9Z5Ly0xyaghN73ed?si=3bfb5510946442e7&nd=1', '_blank')">indie
+        rock</a>, doing deep dives into <a class="underline"
+        onclick="window.open('https://www.youtube.com/watch?v=-q8nIhhwkVs', '_blank')">people</a>; places; and <a
+        class="underline"
+        onclick="window.open('https://beccahuman.substack.com/p/the-meaning-of-suffering?utm_source=substack&utm_medium=email', '_blank')">concepts</a>
+      I find interesting, and spending time with <a class="underline" onclick="window.location = ''">people I love</a>
+    </p> -->
+
+    </div>
+    <!-- <p class="paragraph_text">
+        Why - I spend my time working on what I love, surrounded by people I love.
+    </p> -->
+    <!-- <p class="paragraph_text">Where - New York & Florida</p> -->
+
+    <!-- <p class="paragraph_text">Why - My life's greatest wish is to change the world for those with complex chronic illness
+    through technological innovation.</p> -->
+    <!-- <p class="paragraph_text">
+        Whom - Everything I do is for my mother & loved ones.
+    </p> -->
+
+    <br />
+    <p class="paragraph_text" style="padding-bottom: 40px;">
+        December 11, 2024
+    </p>
+    <!-- <p class="paragraph_text">August 20, 2023</p> -->
+    <!-- <br />
+    <p class="paragraph_text">Last autumn I was getting dinner with a friend and she told me my eyes didn't feel present. That I looked like I was in a dreamy haze. She asked me where I was. She was right. I had been so focused on what felt like a million moving parts that I couldn't even enjoy a dinner that took an entire month to reserve. These days I'm trying to better understand what it means to live in the present. I'm fortunate enough to be around such wonderful people, events, experiences and yet it's so easy to lose focus on the now. It's not sustainable to always be worrying about the next milestone, the next goal, the next goodbye, the next hug. </p>
+
+    <p class="paragraph_text">Acknowledgment is a huge part of tackling any hurdle. Without it, you'd rob yourself the opportunity to conquer whatever life throws your way. The freedom that comes with total acceptance is pure bliss, it helps with being proactive as well.</p>
+
+    <p class="paragraph_text">These days I'm rarely using my phone besides answering texts or taking calls (so many people that preach of finding tranquility talk about letting go of their phone entirely, but unfortunately I don't see that as a possibility for the near future). I'm establishing pillars (personal routines) that I need for each day to feel great so as to not be consumed by stressors that are out of my control. I'm constantly giving and receiving unconditional love. I'm reading close to two books every week and half.</p>
+
+    <p class="paragraph_text">I'm grateful for the way events have unfolded. I'm thankful for life. </p>
+
+    <p class="paragraph_text">- DM</p>
+
+    <img style="width: 210px; margin-left: 120px;" src="./assets/david.png"/>
+
+    <br /><br /><br /> -->
+    <div id="ann" class="ann" draggable="false" style="right: 18px; top: 40%">
+        <img draggable="false" style="width: 100%; height: 278px; object-fit: cover;" src="./assets/ann.png" />
+        <p class="bottom_text">Ann is the co founder of <a class="underline" href="https://www.floodgate.com/beliefs"
+                target="_blank">Floodgate.</a> A <a class="underline" href="https://www.floodgate.com/beliefs"
+                target="_blank">New York Times's Top 20 VC worldwide.</a> A regular face on <a class="underline"
+                href="https://www.forbes.com/lists/midas/?sh=75f463b45922" target="_blank">Forbes' Midas list.</a> A
+            kind soul.
+        </p>
+        <div class="x closeaann">
+            <img style="width: 12px; height: 12px" src="./assets/x_icon.svg" />
+        </div>
+    </div>
+
+    <div id="baris" class="ann" draggable="false" style="right: 20%; top: 100px">
+        <img draggable="false" style="width: 100%; height: 278px; object-fit: cover;" src="./assets/baris.png" />
+        <p class="bottom_text">Baris is the co-founder of <a class="underline" href="https://human.capital/"
+                target="_blank">Human Capital.</a> A <a class="underline"
+                href="https://www.forbes.com/30-under-30/2021/venture-capital/" target="_blank">Forbes' 30U30</a> for
+            Venture
+            Capital. A futurist. A leader. A personal inspiration.</p>
+        <div class="x" onclick="closeBaris()">
+            <img style="width: 12px; height: 12px" src="./assets/x_icon.svg" />
+        </div>
+    </div>
+
+    <div id="eliana" class="ann" draggable="false" style="right: 120px; top: 10px">
+        <img draggable="false" style="width: 100%; height: 278px; object-fit: cover;" src="./assets/eliana.png" />
+        <p class="bottom_text">Eliana is the co-founder of <a class="underline"
+                href="https://www.envisionaccelerator.com/" target="_blank">Envision.</a> A <a class="underline"
+                href="https://www.bizjournals.com/boston/inno/stories/inno-insights/2020/09/24/25-under-25-young-entrepreneurs-boston-2020.html"
+                target="_blank">Massachusetts' 25U25</a> The first believer for 60+ startups (including mine). A genius.
+            A
+            visionary. A prodigy.</p>
+        <div class="x" style="background-color: rgba(0, 0, 0, 0.5);" onclick="closeEliana()">
+            <img style="width: 12px; height: 12px" src="./assets/x_icon.svg" />
+        </div>
+    </div>
+
+    <div id="arjun" class="ann" draggable="false" style="right: 40px; top: 200px">
+        <img draggable="false" style="width: 100%; height: 278px; object-fit: cover;" src="./assets/arjun.png" />
+        <p class="bottom_text">Arjun is the co-founder of <a class="underline" href="https://www.cloaked.app/"
+                target="_blank">Cloaked.</a> A <a class="underline"
+                href="https://techcrunch.com/2020/09/13/human-capital-announces-the-winners-of-its-delta-fellowship-program/"
+                target="_blank">Delta Fellow.</a> A human who will define this generation. A close friend.</p>
+        <div class="x" style="background-color: rgba(0, 0, 0, 0.5);" onclick="closeArjun()">
+            <img style="width: 12px; height: 12px" src="./assets/x_icon.svg" />
+        </div>
+    </div>
+
+    <div id="abhijay" class="ann" draggable="false" style="right: 12px; top: 50%">
+        <img draggable="false" style="width: 100%; height: 278px; object-fit: cover;" src="./assets/abhijay.png" />
+        <p class="bottom_text">Aislinn helmed the <a class="underline"
+                href="https://pennathletics.com/sports/womens-rowing" target="_blank">UPenn Women's Rowing Team.</a> A
+            close friend. A virtuous soul. My personal north star since
+            secondary school.</p>
+        <div class="x" style="background-color: rgba(0, 0, 0, 0.5);" onclick="closeAbhijay()">
+            <img style="width: 12px; height: 12px" src="./assets/x_icon.svg" />
+        </div>
+    </div>
+
+    <div id="havi" class="ann" draggable="false" style="right: 30px; top: 60%">
+        <img draggable="false" style="width: 100%; height: 278px; object-fit: cover;" src="./assets/havi.png" />
+        <p class="bottom_text">Stuart is the current CTO of <a class="underline" href="https://www.onemedical.com/"
+                target="_blank">OneMedical.</a> A technologist. An influential operator. A wise human.</p>
+        <div class="x" onclick="closeHavi()">
+            <img style="width: 12px; height: 12px" src="./assets/x_icon.svg" />
+        </div>
+    </div>
+
+    <div id="family" class="ann" draggable="false" style="right: 28px; top: 48px">
+        <img draggable="false" style="width: 100%; height: 278px; object-fit: cover;" src="./assets/family.png" />
+        <div class="x closefam">
+            <img style="width: 12px; height: 12px" src="./assets/x_icon.svg" />
+        </div>
+    </div>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+
+            const music = new Audio('./assets/kendrick.mp3');
+
+            let zIndex = 9;
+
+            function setAnn() {
+                zIndex += 1;
+                let display = document.getElementById("ann");
+                console.log(display.style.display)
+                if (display.style.display == "block") display.style.display = "none"
+                else {
+                    display.style.display = "block"
+                    display.style.zIndex = zIndex;
+                }
+            }
+
+            // document.querySelector(".setaann").addEventListener("click", () => {
+            //     setAnn()
+            // })
+
+            function closeAnn() {
+                console.log("hi")
+                let display = document.getElementById("ann");
+                display.style.display = "none"
+            }
+
+            // document.querySelector(".closeaann").addEventListener("click", () => {
+            //     closeAnn()
+            // })
+
+            function setBaris() {
+                zIndex += 1;
+                let display = document.getElementById("baris");
+                console.log(display.style.display)
+                if (display.style.display == "block") display.style.display = "none"
+                else {
+                    display.style.display = "block";
+                    display.style.zIndex = zIndex;
+                }
+            }
+
+            function closeBaris() {
+                console.log("hi")
+                let display = document.getElementById("baris");
+                display.style.display = "none"
+            }
+
+            function setEliana() {
+                zIndex += 1;
+                let display = document.getElementById("eliana");
+                console.log(display.style.display)
+                if (display.style.display == "block") display.style.display = "none"
+                else {
+                    display.style.display = "block"
+                    display.style.zIndex = zIndex;
+                }
+            }
+
+            function closeEliana() {
+                console.log("hi")
+                let display = document.getElementById("eliana");
+                display.style.display = "none"
+            }
+
+            function setArjun() {
+                zIndex += 1;
+                let display = document.getElementById("arjun");
+                console.log(display.style.display)
+                if (display.style.display == "block") display.style.display = "none"
+                else {
+                    display.style.display = "block";
+                    display.style.zIndex = zIndex;
+                }
+            }
+
+            function closeArjun() {
+                console.log("hi")
+                let display = document.getElementById("arjun");
+                display.style.display = "none"
+            }
+
+            function setAbhijay() {
+                zIndex += 1;
+                let display = document.getElementById("abhijay");
+                console.log(display.style.display)
+                if (display.style.display == "block") display.style.display = "none"
+                else {
+                    display.style.display = "block";
+                    display.style.zIndex = zIndex;
+                }
+            }
+
+            function closeAbhijay() {
+                console.log("hi")
+                let display = document.getElementById("abhijay");
+                display.style.display = "none"
+            }
+
+            function setHavi() {
+                zIndex += 1;
+                let display = document.getElementById("havi");
+                console.log(display.style.display)
+                if (display.style.display == "block") display.style.display = "none"
+                else {
+                    display.style.display = "block"
+                    display.style.zIndex = zIndex;
+                }
+            }
+
+            function closeHavi() {
+                console.log("hi")
+                let display = document.getElementById("havi");
+                display.style.display = "none"
+            }
+
+            function setFamily() {
+                zIndex += 1;
+                let display = document.getElementById("family");
+                console.log(display.style.display)
+                if (display.style.display == "block") display.style.display = "none"
+                else {
+                    display.style.display = "block"
+                    display.style.zIndex = zIndex;
+                }
+            }
+
+            // document.querySelector(".setfaam").addEventListener("click", () => {
+            //     setFamily()
+            // })
+
+            function closeFamily() {
+                console.log("hi")
+                let display = document.getElementById("family");
+                display.style.display = "none"
+            }
+
+            // document.querySelector(".closefam").addEventListener("click", () => {
+            //     closeFamily()
+            // })
+
+            let mouse = { x: 0, y: 0 }
+            let person = ""
+            // 
+            let ann_x = document.getElementById("ann").getBoundingClientRect().x
+            let ann_y = document.getElementById("ann").getBoundingClientRect().y
+            let old_ann_x = document.getElementById("ann").getBoundingClientRect().x
+            let old_ann_y = document.getElementById("ann").getBoundingClientRect().y
+
+            let baris_x = document.getElementById("baris").getBoundingClientRect().x
+            let baris_y = document.getElementById("baris").getBoundingClientRect().y
+            let old_baris_x = document.getElementById("baris").getBoundingClientRect().x
+            let old_baris_y = document.getElementById("baris").getBoundingClientRect().y
+
+            let eliana_x = document.getElementById("eliana").getBoundingClientRect().x
+            let eliana_y = document.getElementById("eliana").getBoundingClientRect().y
+            let old_eliana_x = document.getElementById("eliana").getBoundingClientRect().x
+            let old_eliana_y = document.getElementById("eliana").getBoundingClientRect().y
+
+            let arjun_x = document.getElementById("arjun").getBoundingClientRect().x
+            let arjun_y = document.getElementById("arjun").getBoundingClientRect().y
+            let old_arjun_x = document.getElementById("arjun").getBoundingClientRect().x
+            let old_arjun_y = document.getElementById("arjun").getBoundingClientRect().y
+
+            let abhijay_x = document.getElementById("abhijay").getBoundingClientRect().x
+            let abhijay_y = document.getElementById("abhijay").getBoundingClientRect().y
+            let old_abhijay_x = document.getElementById("abhijay").getBoundingClientRect().x
+            let old_abhijay_y = document.getElementById("abhijay").getBoundingClientRect().y
+
+            let havi_x = document.getElementById("havi").getBoundingClientRect().x
+            let havi_y = document.getElementById("havi").getBoundingClientRect().y
+            let old_havi_x = document.getElementById("havi").getBoundingClientRect().x
+            let old_havi_y = document.getElementById("havi").getBoundingClientRect().y
+
+            let family_x = document.getElementById("family").getBoundingClientRect().x
+            let family_y = document.getElementById("family").getBoundingClientRect().y
+            let old_family_x = document.getElementById("family").getBoundingClientRect().x
+            let old_family_y = document.getElementById("family").getBoundingClientRect().y
+
+            let drag = false
+
+            document.getElementById("ann").addEventListener("mousedown", ev => {
+                // console.log("mouseY: ", ev.clientY);
+                // console.log("container: ", document.getElementById("ann").getBoundingClientRect().y)
+                // console.log("diff: ", ev.clientY - document.getElementById("ann").getBoundingClientRect().y)
+                zIndex += 1;
+                document.getElementById("ann").style.zIndex = zIndex;
+                let differenceX = ev.clientX - document.getElementById("ann").getBoundingClientRect().x;
+                let differenceY = ev.clientY - document.getElementById("ann").getBoundingClientRect().y;
+                person = "ann"
+                old_ann_x = differenceX
+                old_ann_y = differenceY
+                mouse.x = document.getElementById("ann").getBoundingClientRect().x;
+                mouse.y = document.getElementById("ann").getBoundingClientRect().y;
+                drag = true
+            }, false)
+
+            document.getElementById("ann").addEventListener("touchstart", ev => {
+                person = "ann"
+                old_ann_x = document.getElementById("ann").getBoundingClientRect().x
+                old_ann_y = document.getElementById("ann").getBoundingClientRect().y
+                drag = true
+            }, false)
+
+            document.getElementById("baris").addEventListener("mousedown", ev => {
+                zIndex += 1;
+                document.getElementById("baris").style.zIndex = zIndex;
+                let differenceX = ev.clientX - document.getElementById("baris").getBoundingClientRect().x;
+                let differenceY = ev.clientY - document.getElementById("baris").getBoundingClientRect().y;
+                person = "baris"
+                old_baris_x = differenceX
+                old_baris_y = differenceY
+                drag = true
+            }, false)
+
+            document.getElementById("baris").addEventListener("touchstart", ev => {
+                person = "ann"
+                old_baris_x = document.getElementById("baris").getBoundingClientRect().x
+                old_baris_y = document.getElementById("baris").getBoundingClientRect().y
+                drag = true
+            }, false)
+
+            document.getElementById("eliana").addEventListener("mousedown", ev => {
+                zIndex += 1;
+                document.getElementById("eliana").style.zIndex = zIndex;
+                let differenceX = ev.clientX - document.getElementById("eliana").getBoundingClientRect().x;
+                let differenceY = ev.clientY - document.getElementById("eliana").getBoundingClientRect().y;
+                person = "eliana"
+                old_eliana_x = differenceX
+                old_eliana_y = differenceY
+                drag = true
+            }, false)
+
+            document.getElementById("eliana").addEventListener("touchstart", ev => {
+                person = "eliana"
+                old_eliana_x = document.getElementById("eliana").getBoundingClientRect().x
+                old_eliana_y = document.getElementById("eliana").getBoundingClientRect().y
+                drag = true
+            }, false)
+
+            document.getElementById("arjun").addEventListener("mousedown", ev => {
+                zIndex += 1;
+                document.getElementById("arjun").style.zIndex = zIndex;
+                let differenceX = ev.clientX - document.getElementById("arjun").getBoundingClientRect().x;
+                let differenceY = ev.clientY - document.getElementById("arjun").getBoundingClientRect().y;
+                person = "arjun"
+                old_arjun_x = differenceX
+                old_arjun_y = differenceY
+                drag = true
+            }, false)
+
+            document.getElementById("arjun").addEventListener("touchstart", ev => {
+                person = "arjun"
+                old_arjun_x = document.getElementById("arjun").getBoundingClientRect().x
+                old_arjun_y = document.getElementById("arjun").getBoundingClientRect().y
+                drag = true
+            }, false)
+
+            document.getElementById("abhijay").addEventListener("mousedown", ev => {
+                zIndex += 1;
+                document.getElementById("abhijay").style.zIndex = zIndex;
+                let differenceX = ev.clientX - document.getElementById("abhijay").getBoundingClientRect().x;
+                let differenceY = ev.clientY - document.getElementById("abhijay").getBoundingClientRect().y;
+                person = "abhijay"
+                old_abhijay_x = differenceX
+                old_abhijay_y = differenceY
+                drag = true
+            }, false)
+
+            document.getElementById("abhijay").addEventListener("touchstart", ev => {
+                person = "abhijay"
+                old_abhijay_x = document.getElementById("abhijay").getBoundingClientRect().x
+                old_abhijay_y = document.getElementById("abhijay").getBoundingClientRect().y
+                drag = true
+            }, false)
+
+            document.getElementById("havi").addEventListener("mousedown", ev => {
+                zIndex += 1;
+                document.getElementById("havi").style.zIndex = zIndex;
+                let differenceX = ev.clientX - document.getElementById("havi").getBoundingClientRect().x;
+                let differenceY = ev.clientY - document.getElementById("havi").getBoundingClientRect().y;
+                person = "havi"
+                old_havi_x = differenceX
+                old_havi_y = differenceY
+                drag = true
+            }, false)
+
+            document.getElementById("havi").addEventListener("touchstart", ev => {
+                person = "havi"
+                old_havi_x = document.getElementById("havi").getBoundingClientRect().x
+                old_havi_y = document.getElementById("havi").getBoundingClientRect().y
+                drag = true
+            }, false)
+
+            document.getElementById("family").addEventListener("mousedown", ev => {
+                zIndex += 1;
+                document.getElementById("family").style.zIndex = zIndex;
+                let differenceX = ev.clientX - document.getElementById("family").getBoundingClientRect().x;
+                let differenceY = ev.clientY - document.getElementById("family").getBoundingClientRect().y;
+                person = "family"
+                old_family_x = differenceX
+                old_family_y = differenceY
+                drag = true
+            }, false)
+
+            document.getElementById("family").addEventListener("touchstart", ev => {
+                person = "family"
+                old_family_x = document.getElementById("family").getBoundingClientRect().x
+                old_family_y = document.getElementById("family").getBoundingClientRect().y
+                drag = true
+            }, false)
+
+            window.addEventListener("mouseup", ev => {
+                drag = false
+                if (person == "ann") {
+                    ann_x = document.getElementById("ann").getBoundingClientRect().x
+                    ann_y = document.getElementById("ann").getBoundingClientRect().y
+
+                } else if (person == "baris") {
+                    baris_x = document.getElementById("baris").getBoundingClientRect().x
+                    baris_y = document.getElementById("baris").getBoundingClientRect().y
+                    if (baris_x == old_baris_x && baris_y == old_baris_y && ev.clientX > document.getElementById("baris").getBoundingClientRect().x && ev.clientX < document.getElementById("baris").getBoundingClientRect().x + 90 && ev.clientY > document.getElementById("baris").getBoundingClientRect().y && ev.clientY < document.getElementById("baris").getBoundingClientRect().y + 60) {
+                        window.location = "/all"
+                    }
+                } else if (person == "eliana") {
+                    eliana_x = document.getElementById("eliana").getBoundingClientRect().x
+                    eliana_y = document.getElementById("eliana").getBoundingClientRect().y
+                    if (eliana_x == old_eliana_x && eliana_y == old_eliana_y && ev.clientX > document.getElementById("eliana").getBoundingClientRect().x && ev.clientX < document.getElementById("eliana").getBoundingClientRect().x + 90 && ev.clientY > document.getElementById("eliana").getBoundingClientRect().y && ev.clientY < document.getElementById("eliana").getBoundingClientRect().y + 60) {
+                        window.location = "/all"
+                    }
+                } else if (person == "arjun") {
+                    arjun_x = document.getElementById("arjun").getBoundingClientRect().x
+                    arjun_y = document.getElementById("arjun").getBoundingClientRect().y
+                    // if(eliana_x == old_eliana_x && eliana_y == old_eliana_y && ev.clientX > document.getElementById("eliana").getBoundingClientRect().x && ev.clientX < document.getElementById("eliana").getBoundingClientRect().x+90 && ev.clientY > document.getElementById("eliana").getBoundingClientRect().y && ev.clientY < document.getElementById("eliana").getBoundingClientRect().y + 60){
+                    //     window.location = "/all"
+                    // }
+                } else if (person == "abhijay") {
+                    abhijay_x = document.getElementById("abhijay").getBoundingClientRect().x
+                    abhijay_y = document.getElementById("abhijay").getBoundingClientRect().y
+                } else if (person == "havi") {
+                    havi_x = document.getElementById("havi").getBoundingClientRect().x
+                    havi_y = document.getElementById("havi").getBoundingClientRect().y
+                } else if (person == "family") {
+                    family_x = document.getElementById("family").getBoundingClientRect().x
+                    family_y = document.getElementById("family").getBoundingClientRect().y
+                }
+            }, false)
+
+            window.addEventListener("touchend", ev => {
+                console.log("bi")
+                drag = false
+                if (person == "ann") {
+                    ann_x = document.getElementById("ann").getBoundingClientRect().x
+                    ann_y = document.getElementById("ann").getBoundingClientRect().y
+                    // localStorage.setItem("ann_x", ann_x.toString())
+                    // localStorage.setItem("ann_y", ann_y.toString())
+                    // if(ann_x == old_ann_x && ann_y == old_ann_y){
+                    //     // window.location = "/general"
+                    // }
+                } else if (person == "baris") {
+                    baris_x = document.getElementById("baris").getBoundingClientRect().x
+                    baris_y = document.getElementById("baris").getBoundingClientRect().y
+                } else if (person == "eliana") {
+                    eliana_x = document.getElementById("eliana").getBoundingClientRect().x
+                    eliana_y = document.getElementById("eliana").getBoundingClientRect().y
+                } else if (person == "arjun") {
+                    arjun_x = document.getElementById("arjun").getBoundingClientRect().x
+                    arjun_y = document.getElementById("arjun").getBoundingClientRect().y
+                } else if (person == "abhijay") {
+                    abhijay_x = document.getElementById("abhijay").getBoundingClientRect().x
+                    abhijay_y = document.getElementById("abhijay").getBoundingClientRect().y
+                } else if (person == "havi") {
+                    havi_x = document.getElementById("havi").getBoundingClientRect().x
+                    havi_y = document.getElementById("havi").getBoundingClientRect().y
+                } else if (person == "family") {
+                    family_x = document.getElementById("family").getBoundingClientRect().x
+                    family_y = document.getElementById("family").getBoundingClientRect().y
+                }
+
+            }, false)
+
+            window.addEventListener("mousemove", ev => {
+                if (person == "ann") {
+                    if (drag) {
+                        // console.log("container: ", old_ann_y)
+                        // console.log("gap: ", (mouse.y - old_ann_y))
+                        let move_x = ev.clientX - 178;
+                        let move_y = ev.clientY - 125;
+                        // console.log("logged: ", move_y)
+                        document.getElementById("ann").style.left = Math.min(Math.max(ev.clientX - old_ann_x, 0), (window.innerWidth - 355)) + "px"
+                        document.getElementById("ann").style.top = Math.min(Math.max(ev.clientY - old_ann_y, 0), (window.innerHeight - 235)) + "px"
+                    } else if (!drag) {
+                        mouse.x = ev.clientX;
+                        mouse.y = ev.clientY;
+                    }
+                } else if (person == "baris") {
+                    if (drag) {
+                        document.getElementById("baris").style.left = Math.min(Math.max(ev.clientX - old_baris_x, 0), (window.innerWidth - 355)) + "px"
+                        document.getElementById("baris").style.top = Math.min(Math.max(ev.clientY - old_baris_y, 0), (window.innerHeight - 235)) + "px"
+                    } else if (!drag) {
+                        mouse.x = ev.clientX
+                        mouse.y = ev.clientY
+                    }
+                } else if (person == "eliana") {
+                    if (drag) {
+                        document.getElementById("eliana").style.left = Math.min(Math.max(ev.clientX - old_eliana_x, 0), (window.innerWidth - 355)) + "px"
+                        document.getElementById("eliana").style.top = Math.min(Math.max(ev.clientY - old_eliana_y, 0), (window.innerHeight - 235)) + "px"
+                    } else if (!drag) {
+                        mouse.x = ev.clientX
+                        mouse.y = ev.clientY
+                    }
+                } else if (person == "arjun") {
+                    if (drag) {
+                        document.getElementById("arjun").style.left = Math.min(Math.max(ev.clientX - old_arjun_x, 0), (window.innerWidth - 355)) + "px"
+                        document.getElementById("arjun").style.top = Math.min(Math.max(ev.clientY - old_arjun_y, 0), (window.innerHeight - 235)) + "px"
+                    } else if (!drag) {
+                        mouse.x = ev.clientX
+                        mouse.y = ev.clientY
+                    }
+                } else if (person == "abhijay") {
+                    if (drag) {
+                        document.getElementById("abhijay").style.left = Math.min(Math.max(ev.clientX - old_abhijay_x, 0), (window.innerWidth - 355)) + "px"
+                        document.getElementById("abhijay").style.top = Math.min(Math.max(ev.clientY - old_abhijay_y, 0), (window.innerHeight - 235)) + "px"
+                    } else if (!drag) {
+                        mouse.x = ev.clientX
+                        mouse.y = ev.clientY
+                    }
+                } else if (person == "havi") {
+                    if (drag) {
+                        document.getElementById("havi").style.left = Math.min(Math.max(ev.clientX - old_havi_x, 0), (window.innerWidth - 355)) + "px"
+                        document.getElementById("havi").style.top = Math.min(Math.max(ev.clientY - old_havi_y, 0), (window.innerHeight - 235)) + "px"
+                    } else if (!drag) {
+                        mouse.x = ev.clientX
+                        mouse.y = ev.clientY
+                    }
+                } else if (person == "family") {
+                    if (drag) {
+                        document.getElementById("family").style.left = Math.min(Math.max(ev.clientX - old_family_x, 0), (window.innerWidth - 355)) + "px"
+                        document.getElementById("family").style.top = Math.min(Math.max(ev.clientY - old_family_y, 0), (window.innerHeight - 235)) + "px"
+                    } else if (!drag) {
+                        mouse.x = ev.clientX
+                        mouse.y = ev.clientY
+                    }
+                }
+            })
+
+            window.addEventListener("touchmove", ev => {
+                if (person == "ann") {
+                    if (drag) {
+                        // Math.min(Math.max(ann_x + (ev.targetTouches[0].clientX - mouse.x), 0), (window.screen.width - 64)) + "px"
+                        document.getElementById("ann").style.left = Math.min(Math.max(0, ev.targetTouches[0].clientX - 45), window.screen.width - 94) + "px"
+                        document.getElementById("ann").style.top = Math.min(Math.max(0, ev.targetTouches[0].clientY - 45), window.screen.height - 94) + "px"
+                    } else if (!drag) {
+                        mouse.x = ev.changedTouches[0].clientX
+                        mouse.y = ev.changedTouches[0].clientY
+                    }
+                } else if (person == "baris") {
+                    if (drag) {
+                        // Math.min(Math.max(ann_x + (ev.targetTouches[0].clientX - mouse.x), 0), (window.screen.width - 64)) + "px"
+                        document.getElementById("baris").style.left = Math.min(Math.max(0, ev.targetTouches[0].clientX - 45), window.screen.width - 94) + "px"
+                        document.getElementById("baris").style.top = Math.min(Math.max(0, ev.targetTouches[0].clientY - 45), window.screen.height - 94) + "px"
+                    } else if (!drag) {
+                        mouse.x = ev.changedTouches[0].clientX
+                        mouse.y = ev.changedTouches[0].clientY
+                    }
+                } else if (person == "eliana") {
+                    if (drag) {
+                        // Math.min(Math.max(ann_x + (ev.targetTouches[0].clientX - mouse.x), 0), (window.screen.width - 64)) + "px"
+                        document.getElementById("eliana").style.left = Math.min(Math.max(0, ev.targetTouches[0].clientX - 45), window.screen.width - 94) + "px"
+                        document.getElementById("eliana").style.top = Math.min(Math.max(0, ev.targetTouches[0].clientY - 45), window.screen.height - 94) + "px"
+                    } else if (!drag) {
+                        mouse.x = ev.changedTouches[0].clientX
+                        mouse.y = ev.changedTouches[0].clientY
+                    }
+                } else if (person == "arjun") {
+                    if (drag) {
+                        // Math.min(Math.max(ann_x + (ev.targetTouches[0].clientX - mouse.x), 0), (window.screen.width - 64)) + "px"
+                        document.getElementById("arjun").style.left = Math.min(Math.max(0, ev.targetTouches[0].clientX - 45), window.screen.width - 94) + "px"
+                        document.getElementById("arjun").style.top = Math.min(Math.max(0, ev.targetTouches[0].clientY - 45), window.screen.height - 94) + "px"
+                    } else if (!drag) {
+                        mouse.x = ev.changedTouches[0].clientX
+                        mouse.y = ev.changedTouches[0].clientY
+                    }
+                } else if (person == "abhijay") {
+                    if (drag) {
+                        // Math.min(Math.max(ann_x + (ev.targetTouches[0].clientX - mouse.x), 0), (window.screen.width - 64)) + "px"
+                        document.getElementById("abhijay").style.left = Math.min(Math.max(0, ev.targetTouches[0].clientX - 45), window.screen.width - 94) + "px"
+                        document.getElementById("abhijay").style.top = Math.min(Math.max(0, ev.targetTouches[0].clientY - 45), window.screen.height - 94) + "px"
+                    } else if (!drag) {
+                        mouse.x = ev.changedTouches[0].clientX
+                        mouse.y = ev.changedTouches[0].clientY
+                    }
+                } else if (person == "havi") {
+                    if (drag) {
+                        // Math.min(Math.max(ann_x + (ev.targetTouches[0].clientX - mouse.x), 0), (window.screen.width - 64)) + "px"
+                        document.getElementById("havi").style.left = Math.min(Math.max(0, ev.targetTouches[0].clientX - 45), window.screen.width - 94) + "px"
+                        document.getElementById("havi").style.top = Math.min(Math.max(0, ev.targetTouches[0].clientY - 45), window.screen.height - 94) + "px"
+                    } else if (!drag) {
+                        mouse.x = ev.changedTouches[0].clientX
+                        mouse.y = ev.changedTouches[0].clientY
+                    }
+                } else if (person == "family") {
+                    if (drag) {
+                        // Math.min(Math.max(ann_x + (ev.targetTouches[0].clientX - mouse.x), 0), (window.screen.width - 64)) + "px"
+                        document.getElementById("family").style.left = Math.min(Math.max(0, ev.targetTouches[0].clientX - 45), window.screen.width - 94) + "px"
+                        document.getElementById("family").style.top = Math.min(Math.max(0, ev.targetTouches[0].clientY - 45), window.screen.height - 94) + "px"
+                    } else if (!drag) {
+                        mouse.x = ev.changedTouches[0].clientX
+                        mouse.y = ev.changedTouches[0].clientY
+                    }
+                }
+            })
+        })
+
+    </script>
+
+    <script src="./js/type.js"></script>
+</body>
+
+</html>
