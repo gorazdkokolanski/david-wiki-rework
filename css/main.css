@@ -105,13 +105,13 @@ strong{
     line-height: 130%;
     text-align: left;
     margin-left: 24px;
-    width: 218px;
+    width: 228px;
     letter-spacing: 1%;
 }
 
 @media only screen and (max-width:768px){
     .paragraph_text{
-    width: 218px;
+    width: 188px;
 }
 }
 
