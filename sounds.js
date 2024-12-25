@@ -48,26 +48,24 @@ midHeart.addEventListener("mouseout", () => {
 
 let opened = false
 
-audioIndex.addEventListener("click", () => {
-    if (!opened) {
-        audioIndex.innerHTML = `
-            <div>Audio Index</div>
-            <div>-</div>
-        `
-        midHeart.style.display = "flex"
-        rightHeart.style.display = "flex"
-        opened = true
-    }
-    else {
-        audioIndex.innerHTML = `
-            <div>Audio Index</div>
-            <div>+</div>
-        `
-        midHeart.style.display = "none"
-        rightHeart.style.display = "none"
-        opened = false
-    }
-})
+// audioIndex.addEventListener("click", () => {
+//     if (!opened) {
+//         audioIndex.innerHTML = `
+//             <div>Audio Index</div>
+//             <div>-</div>
+//         `
+//         midHeart.style.display = "flex"
+//         rightHeart.style.display = "flex"
+//     }
+//     else {
+//         audioIndex.innerHTML = `
+//             <div>Audio Index</div>
+//             <div>+</div>
+//         `
+//         midHeart.style.display = "none"
+//         rightHeart.style.display = "none"
+//     }
+// })
 
 window.addEventListener("mousemove", (e) => {
     if (opened) {
@@ -84,18 +82,18 @@ window.addEventListener("mousemove", (e) => {
     }
 });
 
-document.addEventListener("click", () => {
-    if (opened && document.querySelector("body").classList.contains("no-cursor")) {
-        audioIndex.innerHTML = `
-            <div>Audio Index</div>
-            <div>+</div>
-        `
-        midHeart.style.display = "none"
-        rightHeart.style.display = "none"
-        opened = false
-        document.querySelector("body").classList.remove("no-cursor");
-    }
-})
+// document.addEventListener("click", () => {
+//     if (opened && document.querySelector("body").classList.contains("no-cursor")) {
+//         audioIndex.innerHTML = `
+//             <div>Audio Index</div>
+//             <div>+</div>
+//         `
+//         midHeart.style.display = "none"
+//         rightHeart.style.display = "none"
+//         opened = false
+//         document.querySelector("body").classList.remove("no-cursor");
+//     }
+// })
 
 let mobileOpened = false
 
@@ -165,3 +163,5 @@ mobileFooterTop.addEventListener("click", () => {
         mobileOpened = false
     }
 })
+
+// audioIndex.click()

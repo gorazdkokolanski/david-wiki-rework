@@ -220,7 +220,6 @@ section {
     width: calc(57% - 100px);
     display: flex;
     justify-content: center;
-    display: none;
 }
 
 .mid-heart-content{
@@ -260,7 +259,6 @@ section {
 .right-heart{
     width: 21%;
     margin-right: 100px;
-    display: none;
 }
 
 .right-heart-photo-div{
@@ -272,7 +270,6 @@ section {
 }
 
 body.no-cursor{
-    cursor: none;
     overflow: hidden;
 }
 
@@ -284,10 +281,11 @@ body.no-cursor{
     display: none;
     pointer-events: none;
     min-width: 52px;
+    display: none;
 }
 
 .no-cursor .closex{
-    display: flex;
+    display: none;
 }
 
 .abs-heart{

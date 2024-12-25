@@ -101,17 +101,38 @@ strong{
 .paragraph_text{
     font-family: 'Electrolize', sans-serif;
     color: #ffffff;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 130%;
     text-align: left;
     margin-left: 24px;
-    width: 228px;
+    width: 238px;
     letter-spacing: 1%;
+}
+
+@media only screen and (min-width:768px){
+    #container{
+        display: flex;
+        gap: 0;
+        width: 238px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #container .paragraph_text{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .paragraph_text{
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media only screen and (max-width:768px){
     .paragraph_text{
     width: 188px;
+    font-size: 13px;
 }
 }
 
